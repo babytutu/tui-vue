@@ -1,3 +1,3 @@
 module.exports = {
-  outputDir: 'tui', // 打包目录
+  outputDir: 'tui-vue', // 打包目录
 }

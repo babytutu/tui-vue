@@ -7,7 +7,7 @@
     "build:doc": "webpack --config webpack/webpack.prod.js",
     "build:entry": "node bin/build-components.js && node bin/build-router.js && node bin/build-router-demo.js",
     "build:pack": "webpack --config webpack/webpack.pack.js",
-    "deploy": "npm run build:doc && gh-pages -d tui --branch coding-pages",
+    "deploy": "npm run build:doc && gh-pages -d tui-vue -b coding-pages && gh-pages -d tui-vue -o github",
     "lint-fix": "eslint src lib --ext .js,.vue --fix",
     "pub": "npm run build:pack && npm publish"
   },

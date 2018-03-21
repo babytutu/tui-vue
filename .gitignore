@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 dist
-tui
+tui-vue
 
 # local env files
 .env.local
