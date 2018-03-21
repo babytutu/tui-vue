@@ -1,0 +1,26 @@
+.ipw-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.image-preview-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-wraper {
+  img {
+    width: 100%;
+  }
+}
+
+.zoom {
+  &-enter-active, &-leave-active {
+    transition: all .25s
+  }
+  &-enter, &-leave-active {
+    opacity: 0;
+    transform: scale(.8)
+  }
+}

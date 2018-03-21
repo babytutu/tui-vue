@@ -1,13 +1,22 @@
 {
-  "name": "webpack-demo",
+  "name": "tui-vue",
   "version": "0.0.1",
-  "description": "webpack4 demo with vue&eslint&babel&stylus&postcss",
-  "main": "src/index.js",
+  "description": "mobile components with vue2",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/webpack.dev.js",
-    "lint-fix": "eslint src --ext .js,.vue --fix",
-    "build": "webpack --config webpack/webpack.prod.js"
+    "start": "npm run build:entry && webpack-dev-server --config webpack/webpack.dev.js",
+    "build:doc": "webpack --config webpack/webpack.prod.js",
+    "build:entry": "node bin/build-components.js && node bin/build-router.js && node bin/build-router-demo.js",
+    "build:pack": "webpack --config webpack/webpack.pack.js",
+    "deploy": "npm run build:doc && gh-pages -d tui --branch coding-pages",
+    "lint-fix": "eslint src lib --ext .js,.vue --fix",
+    "pub": "npm run build:pack && npm publish"
   },
+  "main": "dist/index.js",
+  "style": "dist/style.css",
+  "files": [
+    "lib",
+    "dist"
+  ],
   "keywords": [
     "webpack",
     "babel",
@@ -32,6 +41,8 @@
     "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-import": "^2.9.0",
     "file-loader": "^1.1.11",
+    "gh-pages": "^1.1.0",
+    "highlight.js": "^9.12.0",
     "html-webpack-plugin": "^3.0.6",
     "ip": "^1.1.5",
     "mini-css-extract-plugin": "^0.2.0",
@@ -44,6 +55,7 @@
     "stylus-loader": "^3.0.2",
     "uglifyjs-webpack-plugin": "^1.2.3",
     "vue-loader": "^14.2.1",
+    "vue-markdown-loader": "^2.4.0",
     "vue-style-loader": "^4.0.2",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.1.1",
@@ -52,6 +64,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "better-scroll": "^1.8.4",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   }

@@ -1,32 +1,62 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const common = require('./webpack.common.js')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const outputDir = require('./../app.config').outputDir
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-module.exports = merge(common, {
+module.exports = {
   mode: 'production',
+  entry: {
+    index: './lib/index.js',
+    style: './lib/assets/style/index.styl'
+  },
+  output: {
+    filename: '[name].js',
+    path: path.join(process.cwd(), 'dist'),
+    library: 'tui',       // 模块名称
+    libraryTarget: 'umd',   // 输出格式
+    umdNamedDefine: true,    // 是否将模块名称作为 AMD 输出的命名空间
+  },
   plugins: [
-    new CleanWebpackPlugin([outputDir], {
+    new CleanWebpackPlugin(['dist'], {
       root: process.cwd()
     }),
-    new UglifyJSPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: '[name].css',
-      chunkFilename: '[id].css',
     }),
     new OptimizeCssAssetsPlugin(),
-    new webpack.optimize.MinChunkSizePlugin({
-      minChunkSize: 50000 // Minimum number of characters
-    })
   ],
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue',
+    },
+  },
   module: {
     rules: [
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+          'eslint-loader',
+        ],
+      },
       {
         test: /\.css$/,
         use: [
@@ -71,4 +101,9 @@ module.exports = merge(common, {
       },
     ],
   },
-})
+  resolve: {
+    alias: {
+      'src': path.join(process.cwd(), 'src')
+    }
+  }
+}

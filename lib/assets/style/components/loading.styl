@@ -1,0 +1,45 @@
+.loading-wrapper
+  position: fixed;
+  transform: translate(-50%, -50%)
+  left: 50%
+  top: 50%
+  max-width: 80%;
+  border-radius: $border-radius;
+  background: rgba(0, 0, 0, .6)
+  padding: 15px 30px;
+  font-size: $font-size-s;
+  text-align: center;
+  color: #fff
+  &.static
+    position static
+    background: none
+    top 0
+    transform: translate(-50%, 0)
+
+  .spinner
+    position: relative
+    width: 50px
+    height: 50px
+    margin: 10px auto 15px
+    font-size: 3em
+
+  .spinner .spinner-blade
+    position: absolute
+    left: 44.5%
+    top: 37%
+    width: 0.074em
+    height: 0.2777em
+    background-color: #ccc
+    border-radius: 0.0555em
+    animation: spinner-fade 1s linear infinite
+
+  for i in (1..12)
+    .spinner .spinner-blade:nth-child({i})
+      animation-delay: (1 / 12 * (i - 21)) s
+      transform: rotate((360 / 12 * i) deg) translate(0, -150%)
+
+  @keyframes spinner-fade
+    0%
+      opacity: 1
+    100%
+      opacity: 0.1

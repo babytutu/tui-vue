@@ -1,0 +1,23 @@
+.tui-cell{
+  z-index 10
+  height: 50px
+  padding 0 10px
+  border-bottom-color: $color-border-light
+  background: #fff
+  color: $color-dark
+  line-height 50px
+  &-title{
+    font-size: $font-size-s
+    text-align left
+    &.gray{
+      color: $color-gray
+    }
+  }
+  &-right{
+    text-align right
+    flex 1
+  }
+  &.noborder{
+    border: none
+  }
+}

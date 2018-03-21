@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack =  require('webpack')
+const outputDir = require('./../app.config').outputDir
 
 let favicon = path.join(process.cwd(), 'favicon.ico')
 
@@ -16,7 +17,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    path: path.join(process.cwd(), 'dist'),
+    path: path.join(process.cwd(), outputDir),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -49,12 +50,29 @@ module.exports = {
           'babel-loader',
           'eslint-loader',
         ],
+      },
+      {
+        test: /\.md$/,
+        loader: 'vue-markdown-loader',
+        include: /src/,
+        options: {
+          preventExtract: true,
+          preprocess: function (MarkdownIt, Source) {
+            MarkdownIt.renderer.rules.table_open = function () {
+              return '<div class="table-container"><table class="table">'
+            }
+            MarkdownIt.renderer.rules.table_close = function () {
+              return '</table></div>'
+            }
+            return Source
+          }
+        }
       }
     ],
   },
   resolve: {
     alias: {
-      'src': path.join(process.cwd(), 'src')
+      'src': path.join(process.cwd(), 'src'),
     }
   }
 }

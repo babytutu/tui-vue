@@ -1,0 +1,26 @@
+[
+  {
+    "title": "JS Components",
+    "components": [
+      "loading",
+      "model",
+      "popup",
+      "toast",
+      "scroll",
+      "slide",
+      "slip"
+    ]
+  },
+  {
+    "title": "CSS Components",
+    "components": [
+      "button",
+      "card",
+      "cell",
+      "layout",
+      "header",
+      "image-preview",
+      "back-to-top"
+    ]
+  }
+]

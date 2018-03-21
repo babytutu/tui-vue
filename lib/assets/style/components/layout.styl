@@ -1,0 +1,25 @@
+.tui-warper{
+  position absolute
+  width 100%
+  height 100%
+  overflow hidden
+  display flex
+  flex-direction column
+  &-content{
+    position relative
+    flex: 1
+    &.is-scroll{
+      overflow-y: auto
+    }
+  }
+  &-pointer{
+    position fixed
+    right 30px
+    bottom 30px
+    padding 40px 30px
+    background #333
+    color #fff
+    border-radius: 100%
+    z-index 11
+  }
+}
