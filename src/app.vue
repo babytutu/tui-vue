@@ -111,7 +111,7 @@ export default {
         }
 
         &.navbar {
-          width 25%
+          width 40%
           padding-right 0
         }
 
@@ -132,20 +132,20 @@ export default {
 
     .navbar {
       left: 0;
-      margin-left: -30%;
+      margin-left: -40%;
       margin-right: 0;
       opacity: 1;
       position: absolute;
       top: 0;
       transition: opacity .3s;
-      width: 30%;
+      width: 40%;
       z-index: 10;
       min-width: auto;
       padding: 0;
     }
 
     .slide-in-left {
-      transform: translate3d(30%, 0, 0);
+      transform: translate3d(40%, 0, 0);
 
       .navbar {
         opacity: 1;
@@ -167,7 +167,7 @@ export default {
     .navbar-toggle {
       display: block;
       background-color: #26a2ff;
-      border-radius: 4px;
+      border-radius: $border-radius;
       border: 1px solid #fff;
       height: 35px;
       margin: 10px 0;

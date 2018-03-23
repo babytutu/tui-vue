@@ -1,9 +1,12 @@
 <template>
   <div class="btn-demo">
-    <m-button class="dd-btn tui-border" @click="show=true">打开弹窗</m-button>
-    <m-model v-model="show" :onClose="doClose">
-      <m-button class="dd-btn tui-border" @click="show=false">关闭弹窗</m-button>
-    </m-model>
+    <tui-button class="dd-btn tui-border"
+                @click="show=true">打开弹窗</tui-button>
+    <tui-model v-model="show"
+               :onClose="doClose">
+      <tui-button class="dd-btn tui-border"
+                  @click="show=false">关闭弹窗</tui-button>
+    </tui-model>
   </div>
 </template>
 <script>

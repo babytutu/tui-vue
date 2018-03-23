@@ -1,6 +1,6 @@
 <template>
   <div class="avatars">
-    <m-image-preview :src="url"></m-image-preview>
+    <tui-image-preview :src="url"></tui-image-preview>
   </div>
 </template>
 <script>

@@ -1,26 +1,24 @@
 <template>
-  <div class="ipw-wrapper">
-    <m-model v-model="isShow"
-             :mask="true"
-             :prevent="false">
-      <div class="img-wraper">
-        <img :src="largeSrc"
-             @click="isShow = false"
-             @touchmove.prevent="() => {}">
-      </div>
-    </m-model>
-    <div class="image-preview-wrapper">
-      <template v-if="!src">-</template>
-      <template v-else>
-        <img :src="src"
-             @click="isShow = true">
-      </template>
-    </div>
+  <div class="tui-image-preview">
+    <template v-if="!src">-</template>
+    <template v-else>
+      <img :src="src"
+            @click="isShow = true">
+      <tui-model v-model="isShow"
+                  :mask="true"
+                  :prevent="false">
+        <div class="tui-image-preview_img-wraper">
+          <img :src="src"
+                @click="isShow = false"
+                @touchmove.prevent="() => {}">
+        </div>
+      </tui-model>
+    </template>
   </div>
 </template>
 <script>
 export default {
-  name: 'm-image-preview',
+  name: 'tui-image-preview',
   props: {
     src: {
       type: String,
@@ -29,7 +27,6 @@ export default {
   data() {
     return {
       isShow: false,
-      largeSrc: this.src,
     }
   },
 }

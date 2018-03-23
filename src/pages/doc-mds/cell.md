@@ -2,24 +2,26 @@
 
 ```html
 <template>
-  <m-cell title="左边很多字">
-    <template slot="right">
-      右边很多字
-    </template>
-  </m-cell>
-  <m-cell :noborder="true" title="左边很多字">
-    <template slot="right">
-      右边很多字
-    </template>
-  </m-cell>
+  <div>
+    <tui-cell title="左边很多字">
+      <template slot="right">
+        右边很多字
+      </template>
+    </tui-cell>
+    <tui-cell :noborder="true"
+              title="左边很多字">
+      <template slot="right">
+        右边很多字
+      </template>
+    </tui-cell>
+  </div>
 </template>
 ```
 
 ## Props
 | 参数    | 说明      | 类型            | 可选值        | 默认值  |
 | ----- | ------- | ------------- | ---------- | ---- |
-| title | 标题内容    | String,Number | -          | -    |
-| titleClass | 标题样式名    | String | gray          | -    |
+| title | 标题内容    | String | -          | -    |
 | noborder | 没有底线    | Boolean | -          | false    |
 
 ## Slot

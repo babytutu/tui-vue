@@ -1,6 +1,6 @@
 <template>
   <div class="btn-demo">
-    <m-button @click="showLoad">点击加载</m-button>
+    <tui-button @click="showLoad">点击加载</tui-button>
   </div>
 </template>
 <script>

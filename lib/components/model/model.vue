@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-show="visible"
+    <div v-if="visible"
         :class="['tui-mask-bg', { 'no-bg': !mask }]"
         @touchmove="(e) => e.preventDefault()"
         @click="doClickMask">
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'm-model',
+  name: 'tui-model',
   props: {
     value: {
       type: Boolean,

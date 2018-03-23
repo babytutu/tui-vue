@@ -1,6 +1,6 @@
 <template>
-  <div :class="['tui-cell', 'tc-flex', 'align-center', 'tui-border', { noborder }]">
-    <div :class="['tui-cell-title', titleClass]">
+  <div :class="['tui-cell', 'tui-border', { noborder }]">
+    <div class="tui-cell-title">
       <slot>{{title}}</slot>
     </div>
     <div class="tui-cell-right">
@@ -10,14 +10,10 @@
 </template>
 <script>
 export default {
-  name: 'm-cell',
+  name: 'tui-cell',
   props: {
     title: {
       type: [String, Number],
-    },
-    // 左侧标题颜色样式
-    titleClass: {
-      type: String,
     },
     // 不需要底部边框
     noborder: {

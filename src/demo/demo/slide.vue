@@ -1,36 +1,40 @@
 <template>
   <div class="demo">
-    <m-slide>
-      <div v-for="item in imgs" :key="item.id">
-        <a :href="item.linkUrl">
-          <img :src="item.picUrl">
-        </a>
+    <tui-slide>
+      <div v-for="item in imgs"
+           :key="item.id">
+        <div class="banner"
+             :style="{ 'background-image': `url(${item.picUrl})`}"></div>
       </div>
-    </m-slide>
+    </tui-slide>
   </div>
 </template>
-<script type="text/babel">
-  export default {
-    data() {
-      return {
-        imgs: [
-          {
-            linkUrl: 'http://y.qq.com/w/album.html?albummid=0044K2vN1sT5mE',
-            picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000001YCZlY3aBifi.jpg',
-            id: 11351,
-          },
-          {
-            linkUrl: 'https://y.qq.com/m/digitalbum/gold/index.html?_video=true&id=2197820&g_f=shoujijiaodian',
-            picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000004ckGfg3zaho0.jpg',
-            id: 11372,
-          },
-        ],
-      }
-    },
-  }
+<script>
+export default {
+  data() {
+    return {
+      imgs: [{
+          picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000001YCZlY3aBifi.jpg',
+          id: 11351,
+        },
+        {
+          picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000004ckGfg3zaho0.jpg',
+          id: 11372,
+        },
+      ],
+    }
+  },
+}
 </script>
 <style lang="stylus" scoped>
-  .demo {
+  .demo
     background #f8f8f8
-  }
+    width 100%
+    height 150px
+    overflow hidden
+    .banner
+      background-size: cover;
+      display: block;
+      width: 100%;
+      height: 150px;
 </style>

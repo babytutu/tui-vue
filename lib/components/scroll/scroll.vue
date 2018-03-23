@@ -62,7 +62,7 @@ import Bubble from './bubble.vue'
 import Loading from './loading.vue'
 
 export default {
-  name: 'm-scroll',
+  name: 'tui-scroll',
   components: {
     Bubble,
     Loading,
@@ -101,6 +101,7 @@ export default {
       default: () => ({
         threshold: 90,
         stop: 40,
+        txt: '刷新完成'
       }),
     },
     pullUpLoad: {

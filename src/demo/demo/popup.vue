@@ -1,7 +1,7 @@
 <template>
   <div class="btn-demo">
-    <m-button @click="showLoad">这是alert</m-button>
-    <m-button @click="showPop">这是confirm</m-button>
+    <tui-button @click="showLoad">这是alert</tui-button>
+    <tui-button @click="showPop">这是confirm</tui-button>
   </div>
 </template>
 <script>

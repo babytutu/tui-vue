@@ -20,7 +20,7 @@ import BScroll from 'better-scroll'
 import utils from './../../utils/utils'
 
 export default {
-  name: 'm-slide',
+  name: 'tui-slide',
   props: {
     loop: {
       type: Boolean,

@@ -1,8 +1,8 @@
 <template>
   <div class="btn-demo">
-    <m-button @click="showLoad('top')">消息在上面</m-button>
-    <m-button @click="showLoad('middle')">消息在中间</m-button>
-    <m-button @click="showLoad('bottom')">消息在底部</m-button>
+    <tui-button @click="showLoad('top')">消息在上面</tui-button>
+    <tui-button @click="showLoad('middle')">消息在中间</tui-button>
+    <tui-button @click="showLoad('bottom')">消息在底部</tui-button>
   </div>
 </template>
 <script>

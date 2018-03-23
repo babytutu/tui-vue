@@ -1,16 +1,16 @@
 <template>
   <div class="phone">
-    <iframe
-      class="demo-page"
-      :src="`${baseUrl}#/demo/${name}`"
-      frameborder="0">
+    <iframe class="demo-page"
+            :src="`${baseUrl}#/demo/${name}`"
+            frameborder="0">
     </iframe>
   </div>
 </template>
-
 <script>
 import IS_DEBUG from './../../lib/utils/env'
-import { outputDir } from './../../app.config'
+import {
+  outputDir
+} from './../../app.config'
 
 export default {
   name: 'phone',

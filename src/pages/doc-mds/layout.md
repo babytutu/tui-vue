@@ -3,14 +3,14 @@
 公共化顶部导航，提供自定义头部方案
 
 ```html
-<m-layout :is-scroll="true">
+<tui-layout :is-scroll="true">
   <template>
     自定义头部
   </template>
   <template slot="content">
     呵呵呵
   </template>
-</m-layout>
+</tui-layout>
 ```
 
 ## Props

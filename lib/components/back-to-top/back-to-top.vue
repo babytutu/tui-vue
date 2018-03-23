@@ -10,7 +10,7 @@
 import utils from './../../utils/utils'
 
 export default {
-  name: 'm-back-to-top',
+  name: 'tui-back-to-top',
   props: {
     el: {
       type: String,

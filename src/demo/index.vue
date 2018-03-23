@@ -1,18 +1,18 @@
 <template>
-  <m-layout :is-scroll="true">
+  <tui-layout :is-scroll="true">
     <slot name="header">
-      <m-header :title="route.name.replace('demo-', '')">
+      <tui-header :title="route.name.replace('demo-', '')">
         <div slot="left"
              @click="goBack">返回</div>
         <div slot="right">
           <router-link to="/demo/index">主页</router-link>
         </div>
-      </m-header>
+      </tui-header>
     </slot>
     <template slot="content">
       <router-view></router-view>
     </template>
-  </m-layout>
+  </tui-layout>
 </template>
 <script>
 export default {

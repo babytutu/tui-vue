@@ -1,5 +1,5 @@
 <template>
-  <div :class="['tui-header', 'tc-flex', 'align-center', { 'is-fixed' : fixed }]"
+  <div :class="['tui-header tui-border', { 'is-fixed' : fixed }]"
        @touchmove.prevent="() => {}">
     <div class="tui-header-left">
       <slot name="left"></slot>
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'm-header',
+  name: 'tui-header',
   props: {
     title: {
       type: [String, Number],

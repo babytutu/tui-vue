@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: 'm-layout',
+  name: 'tui-layout',
   props: {
     // 是否滚动
     isScroll: {

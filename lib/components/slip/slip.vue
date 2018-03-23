@@ -18,7 +18,7 @@
 import utils from './../../utils/utils'
 
 export default {
-  name: 'm-slip',
+  name: 'tui-slip',
   data() {
     return {
       startX: 0, // 触摸位置

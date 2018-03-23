@@ -2,29 +2,27 @@
   <nav class="nav">
     <ul>
       <li>
-        <router-link
-          class="nav-link"
-          active-class="is-active"
-          exact
-          :to="{ path: '/' }">Overview</router-link>
+        <router-link class="nav-link"
+                     active-class="is-active"
+                     exact
+                     :to="{ path: '/' }">Overview</router-link>
       </li>
-      <div v-for="group in navs" :key="group.name">
+      <div v-for="group in navs"
+           :key="group.name">
         <li>
-          <a
-            href="#"
-            @click.prevent="group.visible = !group.visible"
-            class="nav-label"
-            v-text="group.title">
+          <a href="#"
+             @click.prevent="group.visible = !group.visible"
+             class="nav-label"
+             v-text="group.title">
           </a>
         </li>
         <ul>
           <li v-for="item in group.components"
               :key="item">
-            <router-link
-              class="nav-link"
-              :to="{ path: item }"
-              active-class="is-active"
-              v-text="item">
+            <router-link class="nav-link"
+                         :to="{ path: item }"
+                         active-class="is-active"
+                         v-text="item">
             </router-link>
           </li>
         </ul>
@@ -32,19 +30,17 @@
     </ul>
   </nav>
 </template>
-
 <script>
- import NavsConfig from './../nav.config.json'
+import NavsConfig from './../nav.config.json'
 
 export default {
-   data() {
-     return {
-       navs: NavsConfig,
-     }
-   },
- }
+  data() {
+    return {
+      navs: NavsConfig,
+    }
+  },
+}
 </script>
-
 <style lang="stylus" scoped>
   .edit-doc-btn {
     color: red !important;

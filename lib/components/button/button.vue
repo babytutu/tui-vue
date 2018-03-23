@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name: 'm-button',
+  name: 'tui-button',
   props: {
     type: {
       type: String,

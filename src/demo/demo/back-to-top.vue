@@ -1,10 +1,10 @@
 <template>
   <div>
-    <m-cell v-for="i in list"
-            :key="i"
-            :title="i">
-    </m-cell>
-    <m-back-to-top el="tui-warper-content"></m-back-to-top>
+    <tui-cell v-for="i in list"
+              :key="i"
+              :title="i">
+    </tui-cell>
+    <tui-back-to-top el="tui-warper-content"></tui-back-to-top>
   </div>
 </template>
 <script>

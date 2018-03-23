@@ -4,12 +4,14 @@
 
 ```html
 <template>
-  <div class="btn">
-    <m-button>普通按钮</m-button>
-    <m-button type="dark">黑色的按钮</m-button>
-    <m-button type="red">红色的按钮</m-button>
-    <m-button type="link">假装是链接的按钮</m-button>
-    <m-button :disabled="disabled">禁用的按钮</m-button>
+  <div class="btn-demo">
+    <tui-button @click="changeBtn">普通按钮</tui-button>
+    <tui-button type="primary">蓝色的按钮</tui-button>
+    <tui-button type="danger">红色的按钮</tui-button>
+    <tui-button type="success">绿色的按钮</tui-button>
+    <tui-button type="warning">黄色的按钮</tui-button>
+    <tui-button type="link">假装是链接的按钮</tui-button>
+    <tui-button :disabled="disabled">禁用的按钮</tui-button>
   </div>
 </template>
 <script>
@@ -18,6 +20,11 @@
       return {
         disabled: false,
       }
+    },
+    methods: {
+      changeBtn() {
+        this.disabled = !this.disabled
+      },
     },
   }
 </script>
