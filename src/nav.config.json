@@ -14,13 +14,13 @@
   {
     "title": "CSS Components",
     "components": [
+      "back-to-top",
       "button",
       "card",
       "cell",
-      "layout",
       "header",
       "image-preview",
-      "back-to-top"
+      "layout"
     ]
   }
 ]

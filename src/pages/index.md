@@ -1,11 +1,10 @@
-# 组件说明tui-vue
+# tui-vue [<img src="https://img.shields.io/npm/v/tui-vue.svg">](https://www.npmjs.com/package/tui-vue)
 
 mobile components with vue2
-## 快速上手
+## Install
 
 ```js
 import Vue from 'vue'
-// 引入组件库和样式
 import Tui from 'tui-vue'
 import 'tui-vue/dist/style.css'
 Vue.use(Tui)
