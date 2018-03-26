@@ -78,6 +78,11 @@ export default {
       component: () => import('./demo/slip.vue'),
     },
     {
+      path: 'tab',
+      name: 'demo-tab',
+      component: () => import('./demo/tab.vue'),
+    },
+    {
       path: 'toast',
       name: 'demo-toast',
       component: () => import('./demo/toast.vue'),

@@ -84,6 +84,11 @@ const routes = [
         component: () => import('./pages/doc-mds/slip.md'),
       },
       {
+        path: 'tab',
+        name: 'tab',
+        component: () => import('./pages/doc-mds/tab.md'),
+      },
+      {
         path: 'toast',
         name: 'toast',
         component: () => import('./pages/doc-mds/toast.md'),
