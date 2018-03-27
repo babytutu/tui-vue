@@ -1,4 +1,4 @@
-.tui-cell{
+.tui-cell
   display flex
   align-items: center;
   z-index 10
@@ -8,18 +8,19 @@
   background: #fff
   color: $color-dark
   line-height 50px
-  &-title{
+  &-title
     font-size: $font-size-s
     text-align left
-    &.gray{
-      color: $color-gray
-    }
-  }
-  &-right{
+
+  &-right
     text-align right
     flex 1
-  }
-  &.noborder{
+    display: flex;
+    justify-content: flex-end;
+    input
+      text-align: right
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+  &.noborder
     border: none
-  }
-}

@@ -1,5 +1,5 @@
-# Scroll下拉刷新，上拉加载更多
-
+# 滚动Scroll
+下拉刷新，上拉加载更多
 [better-scroll](https://github.com/ustbhuangyi/better-scroll)
 
 ```html

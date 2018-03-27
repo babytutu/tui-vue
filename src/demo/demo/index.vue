@@ -5,7 +5,7 @@
         <qrcode :text="qrcodeUrl"></qrcode>
       </div>
     </tui-card>
-    <tui-cell v-for="r in router" :key="r.name" v-if="r.name !== 'demo'">
+    <tui-cell v-for="r in router" :key="r.name" v-if="r.name !== 'demo-index'">
       <router-link :to="{ name: r.name }">{{r.path}}</router-link>
     </tui-cell>
   </div>

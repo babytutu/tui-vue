@@ -7,7 +7,7 @@
 export default {
   data() {
     return {
-      url: 'https://avatars2.githubusercontent.com/u/14065833?s=460&v=4',
+      url: 'https://cn.vuejs.org/images/logo.png',
     }
   },
 }

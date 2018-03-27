@@ -23,5 +23,13 @@
       "layout",
       "tab"
     ]
+  },
+  {
+    "title": "Form Components",
+    "components": [
+      "checkbox",
+      "radio",
+      "switch"
+    ]
   }
 ]

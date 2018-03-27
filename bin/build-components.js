@@ -8,6 +8,7 @@ const path = require('path')
 
 const template = require('./utils').template
 const camelCase = require('./utils').camelCase
+const upcase = require('./utils').upcase
 
 // 此为输入路径
 const INPUT_PATH = path.join(__dirname, '../lib/components')
@@ -57,8 +58,9 @@ componentsFiles.map(file => {
   const moduleName = camelCase(dirname)
   const isJsComponents = /toast|message|popup|loading/
   if (!isJsComponents.test(moduleName)) {
-    modulesImport.push(`import ${moduleName} from '${GENERATE_PATH}/${file}/${dirname}.vue'`)
-    modulesName.push(moduleName)
+    const name = upcase(moduleName)
+    modulesImport.push(`import ${name} from '${GENERATE_PATH}/${file}/${dirname}.vue'`)
+    modulesName.push(name)
   } else {
     modulesImport.push(`import $${moduleName} from '${GENERATE_PATH}/${file}'`)
     jsComponents.push(`$${moduleName}`)

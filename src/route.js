@@ -39,6 +39,11 @@ const routes = [
         component: () => import('./pages/doc-mds/cell.md'),
       },
       {
+        path: 'checkbox',
+        name: 'checkbox',
+        component: () => import('./pages/doc-mds/checkbox.md'),
+      },
+      {
         path: 'header',
         name: 'header',
         component: () => import('./pages/doc-mds/header.md'),
@@ -69,6 +74,11 @@ const routes = [
         component: () => import('./pages/doc-mds/popup.md'),
       },
       {
+        path: 'radio',
+        name: 'radio',
+        component: () => import('./pages/doc-mds/radio.md'),
+      },
+      {
         path: 'scroll',
         name: 'scroll',
         component: () => import('./pages/doc-mds/scroll.md'),
@@ -82,6 +92,11 @@ const routes = [
         path: 'slip',
         name: 'slip',
         component: () => import('./pages/doc-mds/slip.md'),
+      },
+      {
+        path: 'switch',
+        name: 'switch',
+        component: () => import('./pages/doc-mds/switch.md'),
       },
       {
         path: 'tab',

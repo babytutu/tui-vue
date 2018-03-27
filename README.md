@@ -28,3 +28,9 @@ Vue.use(Tui)
 - header
 - image-preview
 - layout
+- tab
+
+## Form Components
+- checkbox
+- radio
+- switch

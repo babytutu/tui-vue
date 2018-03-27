@@ -1,8 +1,8 @@
 <template>
-  <div class="tui-tab">
+  <div class="tui-tab tui-border">
     <div v-for="i in list"
          :key="i[label[0]]"
-         :class="['tui-tab-cell', { 'tui-tab-cell_active': i[label[0]] === value}]"
+         :class="['tui-tab-cell tui-border', { 'tui-tab-cell_active': i[label[0]] === value}]"
          @click="changeTab(i[label[0]])">{{i[label[1]]}}</div>
   </div>
 </template>

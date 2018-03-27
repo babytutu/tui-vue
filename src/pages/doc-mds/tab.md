@@ -1,10 +1,13 @@
-## tab切换
+# 标签tab
 
 ```html
 <template>
-  <tui-tab v-model="selected"
-             :list="list"
-             :label="['id', 'name']"></tui-tab>
+  <div>
+    <tui-tab v-model="selected"
+              :list="list"
+              :label="['key', 'value']"></tui-tab>
+    <tui-cell :title="`已选择${selected}`"></tui-cell>
+  </div>
 </template>
 <script>
 export default {
@@ -13,12 +16,20 @@ export default {
       selected: 1,
       list: [
         {
-          id: 1,
-          name: 1
+          key: 1,
+          value: 'tab标签1'
         },
         {
-          id: 2,
-          name: 2
+          key: 2,
+          value: 'tab标签2'
+        },
+        {
+          key: 3,
+          value: 'tab标签2'
+        },
+        {
+          key: 4,
+          value: 'tab标签2'
         },
       ]
     }

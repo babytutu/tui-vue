@@ -33,7 +33,17 @@ function camelCase(str){
   return str.replace(/-(\w)/g, ($0, $1) => $1.toUpperCase())
 }
 
+/**
+ * 首字母大写
+ * @param {string} str -分隔字符串
+ * @returns {string} 首字母大写的字符串
+ */
+function upcase(str) {
+  return str.replace(/^\S/, s => s.toUpperCase())
+}
+
 module.exports = {
   template,
-  camelCase
+  camelCase,
+  upcase
 }

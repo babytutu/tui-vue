@@ -1,0 +1,26 @@
+.tui-radio
+  input
+    position relative
+    width 20px
+    height 20px
+    margin-right: 10px
+    vertical-align: middle;
+    border-radius: 100%
+    background: $color-white
+    border 1px solid $color-border-gray
+    &:checked
+      background: $color-primary
+      border-color $color-primary
+
+    &:checked::after
+      background: $color-white
+      content: " ";
+      border-radius: 100%;
+      top: 5px;
+      left: 5px;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+
+    &:disabled
+      background: $color-gray

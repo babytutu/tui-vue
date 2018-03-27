@@ -28,6 +28,11 @@ export default {
       component: () => import('./demo/cell.vue'),
     },
     {
+      path: 'checkbox',
+      name: 'demo-checkbox',
+      component: () => import('./demo/checkbox.vue'),
+    },
+    {
       path: 'header',
       name: 'demo-header',
       component: () => import('./demo/header.vue'),
@@ -63,6 +68,11 @@ export default {
       component: () => import('./demo/popup.vue'),
     },
     {
+      path: 'radio',
+      name: 'demo-radio',
+      component: () => import('./demo/radio.vue'),
+    },
+    {
       path: 'scroll',
       name: 'demo-scroll',
       component: () => import('./demo/scroll.vue'),
@@ -76,6 +86,11 @@ export default {
       path: 'slip',
       name: 'demo-slip',
       component: () => import('./demo/slip.vue'),
+    },
+    {
+      path: 'switch',
+      name: 'demo-switch',
+      component: () => import('./demo/switch.vue'),
     },
     {
       path: 'tab',

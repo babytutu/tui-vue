@@ -1,4 +1,4 @@
-# Slide 简单轮播
+# 简单轮播Slide
 
 使用[better-scroll](https://github.com/ustbhuangyi/better-scroll)做了简单封装
 外部容器必须定宽定高
