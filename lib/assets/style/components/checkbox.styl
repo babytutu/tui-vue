@@ -8,6 +8,7 @@
     border-radius: 100%
     background: $color-white
     border 1px solid $color-border-gray
+    transition: all .3s
     &:checked
       background: $color-primary
       border-color $color-primary
@@ -27,8 +28,8 @@
       left:3px;
 
     &:disabled
-      background: $color-gray
-      border-color $color-gray
+      background: $color-border-gray
+      border-color $color-border-gray
 
     &:disabled:checked::after
       color: $color-white

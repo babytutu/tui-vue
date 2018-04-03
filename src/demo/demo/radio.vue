@@ -1,8 +1,14 @@
 <template>
   <div>
     <tui-radio v-model="radio"
+               :alias="alias"
                :options="options"></tui-radio>
     <tui-cell>radio: {{radio}}</tui-cell>
+    <tui-radio v-model="radio1"
+               :alias="alias"
+               :disabled="true"
+               :options="options"></tui-radio>
+    <tui-cell>radio: {{radio1}}</tui-cell>
   </div>
 </template>
 <script>
@@ -10,22 +16,17 @@ export default {
   data() {
     return {
       radio: '',
+      radio1: 'a',
       options: [{
-          label: '不可选1',
-          value: '不可选111',
-          disabled: true
+          key: '选项a',
+          val: 'a',
         },
         {
-          label: '可选2',
-          value: '可选222',
-          disabled: false
+          key: '选项b',
+          val: 'b',
         },
-        {
-          label: '可选3',
-          value: '可选333',
-          disabled: false
-        },
-      ]
+      ],
+      alias: ['key', 'val']
     }
   },
 }

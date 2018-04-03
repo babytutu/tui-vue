@@ -37,12 +37,12 @@ export default {
 }
 </script>
 ```
-Props
+## Props
 
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
 | message         | 内容(支持html片段)   | String  | - | - |
-| type         | 类型   | String  | alert、confirm  |  alert|
+| type         | 类型   | String  | alert/confirm  |  alert|
 | onConfirm        | 确定事件   | Function  | - |  -|
 | onCancel         | 取消事件   | Function  | - | - |
 | cancel-text    | 取消按钮文字   | String  | - | 取消 |

@@ -1,7 +1,8 @@
 <template>
   <div>
     <tui-checkbox v-model="checkbox"
-                  :options="options"></tui-checkbox>
+                  :options="options"
+                  :alias="['key', 'val']"></tui-checkbox>
     <tui-cell>checkbox: {{checkbox}}</tui-cell>
   </div>
 </template>
@@ -11,23 +12,23 @@ export default {
     return {
       checkbox: ['禁用111'],
       options: [{
-          label: '禁用选中',
-          value: '禁用111',
+          key: '禁用选中',
+          val: '禁用111',
           disabled: true
         },
         {
-          label: '禁用不可选',
-          value: '禁用222',
+          key: '禁用不可选',
+          val: '禁用222',
           disabled: true
         },
         {
-          label: '可选2',
-          value: '可选222',
+          key: '可选2',
+          val: '可选222',
           disabled: false
         },
         {
-          label: '可选3',
-          value: '可选333',
+          key: '可选3',
+          val: '可选333',
           disabled: false
         },
       ]

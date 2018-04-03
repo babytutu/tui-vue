@@ -1,15 +1,15 @@
 <template>
   <div>
     <tui-cell v-for="i in options"
-         :key="i.value">
+         :key="i[alias[1]]">
       <label class="tui-radio">
         <input type="radio"
               class="tui-radio tui-border"
-              :disabled="i.disabled"
-              :value="i.value"
+              :disabled="disabled"
+              :value="i[alias[1]]"
               v-model="key"
-              @change="$emit('input', key)">
-        {{i.label}}
+              @change="change">
+        {{i[alias[0]]}}
       </label>
     </tui-cell>
   </div>
@@ -20,10 +20,28 @@ export default {
   props: {
     value: String,
     options: Array,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    alias: {
+      type: Array,
+      default: () => [
+        'label',
+        'value'
+      ]
+    }
   },
   data() {
     return {
       key: this.value
+    }
+  },
+  methods: {
+    change() {
+      if (!this.disabled) {
+        this.$emit('input', this.key)
+      }
     }
   },
 }

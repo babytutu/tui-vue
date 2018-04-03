@@ -1,6 +1,6 @@
 {
   "name": "tui-vue",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://babytutu.github.io/tui-vue",
   "description": "mobile components with vue2",
   "repository": {
@@ -14,7 +14,7 @@
     "build:pack": "webpack --config webpack/webpack.pack.js",
     "deploy": "npm run build:doc && gh-pages -d tui-vue -b coding-pages && gh-pages -d tui-vue -o github",
     "lint-fix": "eslint src lib --ext .js,.vue --fix",
-    "pub": "npm run build:pack && npm publish"
+    "pub": "npm run build:pack && gulp && npm publish"
   },
   "main": "dist/index.js",
   "style": "dist/style.css",

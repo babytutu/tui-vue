@@ -1,13 +1,10 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'production',
   entry: {
     index: './lib/index.js',
-    style: './lib/assets/style/index.styl'
   },
   output: {
     filename: '[name].js',
@@ -20,12 +17,6 @@ module.exports = {
     new CleanWebpackPlugin(['dist'], {
       root: process.cwd()
     }),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: '[name].css',
-    }),
-    new OptimizeCssAssetsPlugin(),
   ],
   externals: {
     vue: {
@@ -60,7 +51,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'postcss-loader'
         ],
@@ -68,7 +59,7 @@ module.exports = {
       {
         test: /\.styl$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'postcss-loader',
           'stylus-loader'
@@ -85,13 +76,13 @@ module.exports = {
             ],
             css: [
               'vue-style-loader',
-              MiniCssExtractPlugin.loader,
+              'style-loader',
               'css-loader',
               'postcss-loader'
             ],
             stylus: [
               'vue-style-loader',
-              MiniCssExtractPlugin.loader,
+              'style-loader',
               'css-loader',
               'postcss-loader',
               'stylus-loader'

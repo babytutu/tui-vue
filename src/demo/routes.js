@@ -78,6 +78,11 @@ export default {
       component: () => import('./demo/scroll.vue'),
     },
     {
+      path: 'select',
+      name: 'demo-select',
+      component: () => import('./demo/select.vue'),
+    },
+    {
       path: 'slide',
       name: 'demo-slide',
       component: () => import('./demo/slide.vue'),

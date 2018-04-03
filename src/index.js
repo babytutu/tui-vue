@@ -6,10 +6,10 @@ import router from './route'
 // 文档样式
 import './assets/style/static.styl'
 // 引入组件库和样式
-// import './../lib/assets/style/index.styl'
-// import tui from './../lib/index'
-import './../dist/style.css'
-import tui from './../dist/index'
+import './../lib/assets/style/style.styl'
+import tui from './../lib/index'
+// import './../dist/style.css'
+// import tui from './../dist/index'
 Vue.use(tui)
 
 new Vue({

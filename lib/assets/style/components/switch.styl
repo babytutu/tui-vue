@@ -4,15 +4,19 @@
   background: $color-gray
   border-radius: 15px
   padding: 2px
+  transition: background .4s
   &-dot
     width: 26px
     height 26px
     background: $color-white
     border-radius: 13px
     box-shadow: 0 1px 3px rgba(0, 0, 0, .4)
+    transition: transform .4s
 
   &-active
     background: $color-primary
   &-active > &-dot
     transform: translateX(20px)
 
+  &-disabled
+    opacity: .5

@@ -1,5 +1,7 @@
 <template>
-  <div class="tui-switch" :class="{'tui-switch-active': value}" @click="change">
+  <div class="tui-switch"
+       :class="{'tui-switch-active': value, 'tui-switch-disabled': disabled}"
+       @click="change">
     <div class="tui-switch-dot"></div>
   </div>
 </template>
@@ -7,16 +9,19 @@
 export default {
   name: 'tui-switch',
   props: {
-    title: {
-      type: [String, Number],
-    },
     value: {
       type: Boolean
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
     change() {
-      this.$emit('input', !this.value)
+      if (!this.disabled) {
+        this.$emit('input', !this.value)
+      }
     }
   },
 }

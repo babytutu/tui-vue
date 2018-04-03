@@ -84,6 +84,11 @@ const routes = [
         component: () => import('./pages/doc-mds/scroll.md'),
       },
       {
+        path: 'select',
+        name: 'select',
+        component: () => import('./pages/doc-mds/select.md'),
+      },
+      {
         path: 'slide',
         name: 'slide',
         component: () => import('./pages/doc-mds/slide.md'),

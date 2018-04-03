@@ -33,4 +33,5 @@ Vue.use(Tui)
 ## Form Components
 - checkbox
 - radio
+- select
 - switch

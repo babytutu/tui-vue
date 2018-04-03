@@ -29,6 +29,7 @@
     "components": [
       "checkbox",
       "radio",
+      "select",
       "switch"
     ]
   }
