@@ -26,7 +26,7 @@ module.exports = {
       template: path.join(process.cwd(), 'index.template.ejs'),
     }),
     new webpack.optimize.MinChunkSizePlugin({
-      minChunkSize: 50000 // Minimum number of characters
+      minChunkSize: 20000 // Minimum number of characters
     })
   ],
   module: {
