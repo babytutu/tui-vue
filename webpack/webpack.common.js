@@ -22,7 +22,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       favicon,
-      title: 'webpack-demo',
+      title: 'tui-vue',
       template: path.join(process.cwd(), 'index.template.ejs'),
     }),
     new webpack.optimize.MinChunkSizePlugin({
