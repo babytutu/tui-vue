@@ -33,7 +33,7 @@ export default {
 
 <style lang="stylus" scoped>
   .phone {
-    margin: 10px;
+    margin-top: 20px;
     background-image: url('../assets/phone.png');
     background-repeat: no-repeat;
     background-size: 100%;

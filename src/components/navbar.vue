@@ -5,7 +5,7 @@
         <router-link class="nav-link"
                      active-class="is-active"
                      exact
-                     :to="{ path: '/' }">Overview</router-link>
+                     :to="{ name: 'tui-vue' }">Overview</router-link>
       </li>
       <div v-for="group in navs"
            :key="group.name">
@@ -63,18 +63,18 @@ export default {
     color: #4c555a;
     font-size: 14px;
     min-height: 100%;
-    padding: 40px 0 40px 20px;
+    padding: 20px 0 20px 20px;
   }
 
   .nav-label {
     color: #9da5b3;
     font-weight: bold;
-    padding: 16px 8px;
+    padding: 8px;
     display: block;
   }
 
   .nav-link {
-    padding: 8px;
+    padding: 6px 8px;
     display: block;
     text-decoration: none;
     color: inherit;

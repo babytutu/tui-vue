@@ -60,14 +60,12 @@ export default {
   .main {
     display flex
     height: 100%;
-    padding-right: 10px;
-    min-width: 960px;
+    min-width: 1024px;
     transition: transform .3s ease-in-out;
 
     > section {
       height: inherit;
       overflow: hidden;
-      padding-right 20px
 
       &.is-scrollable {
         overflow: auto;
@@ -75,28 +73,27 @@ export default {
 
       &.navbar {
         width 12%
+        min-width: 180px;
       }
 
       &.content {
-        width 45%
+        width calc(88% - 370px)
+        padding-left 20px
+        padding-right 20px
+        max-width 60%
+      }
+
+      &.demo {
+        padding-right 10px
       }
     }
-  }
-
-  .content {
-    padding-bottom: 2em;
-  }
-
-  .navbar {
-    min-width: 240px;
-    padding-left: 0;
   }
 
   .navbar-toggle-container {
     display: none;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     .main {
       min-width: 0;
       box-sizing: border-box;
@@ -104,7 +101,6 @@ export default {
       margin: 0;
       padding: 0;
       > section {
-        padding-right 20px
 
         &.is-scrollable {
           overflow: auto;
@@ -112,11 +108,12 @@ export default {
 
         &.navbar {
           width 40%
-          padding-right 0
+          min-width 100px
         }
 
         &.content {
           width 100%
+          max-width 100%
         }
       }
     }

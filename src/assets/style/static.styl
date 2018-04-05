@@ -15,7 +15,7 @@ a {
 .content h1, .content h2, .content h3 {
   color: #444;
   font-size: 1.2em;
-  margin: 1.5em 0 1em;
+  margin: 1em 0 1em;
 }
 .content h1 {
   font-size: 2em;
@@ -61,12 +61,16 @@ a {
   text-decoration: none;
 }
 
+.content table th:nth-child(1),
+.content table th:nth-child(2) {
+  width 100px
+}
 .content table th:nth-child(3),
 .content table th:nth-child(5) {
-  width: 65px;
+  width: 70px;
 }
 .content table th:nth-child(4) {
-  width: 110px;
+  width: 160px;
 }
 @media screen and (max-width: 768px) {
   .content .table-container {
