@@ -15,7 +15,7 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'tui-vue',
+        name: '',
         component: () => import('./pages/index.md'),
       },
       {
