@@ -8,14 +8,14 @@
     "url": "git+ssh://git@github.com/babytutu/tui-vue.git"
   },
   "scripts": {
-    "start": "npm run dll && npm run build:entry && webpack-dev-server --config webpack/webpack.dev.js",
-    "build:doc": "npm run dll && webpack --config webpack/webpack.prod.js",
-    "build:entry": "node bin/build-components.js",
-    "build:pack": "webpack --config webpack/webpack.pack.js && gulp",
-    "deploy": "npm run build:doc && gh-pages -d tui-vue -b coding-pages && gh-pages -d tui-vue -o github",
-    "lint-fix": "eslint src lib --ext .js,.vue --fix",
-    "dll": "webpack --config webpack/webpack.dll.js",
-    "pub": "npm run build:pack && npm publish"
+    "start": "node bin start",
+    "doc": "node bin doc",
+    "pack": "node bin pack",
+    "deploy": "node bin deploy",
+    "fix": "node bin fix",
+    "dll": "node bin dll",
+    "pub": "node bin pub",
+    "entry": "node bin entry"
   },
   "main": "dist/index.js",
   "style": "dist/style.css",

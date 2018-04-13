@@ -1,14 +1,17 @@
-
-import demoRoutes from 'src/views/demo/routes' // demo
-import mdRoutes from 'src/views/pages/routes'
+/**
+ * Automatically load each routers in views folder
+ */
+const routeFiles = require.context('./../views', true, /\.js$/)
 
 const routes = [
-  mdRoutes,
-  demoRoutes,
   {
     path: '*',
     redirect: '/',
   }
 ]
+
+routeFiles.keys().map(key => {
+  routes.unshift(routeFiles(key).default)
+})
 
 export default routes

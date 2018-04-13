@@ -18,7 +18,7 @@
           <div class="after-trigger"
                v-else>
             <div class="loading-container">
-              <loading></loading>
+              <spinner></spinner>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
           <div v-if="isPullingDown"
                class="loading">
             <div class="loading-container">
-              <loading></loading>
+              <spinner></spinner>
             </div>
           </div>
           <div v-else><span>{{refreshTxt}}</span></div>
@@ -58,14 +58,14 @@
 </template>
 <script type="text/ecmascript-6">
 import BScroll from 'better-scroll'
-import Bubble from './bubble.vue'
-import Loading from './loading.vue'
+import bubble from './bubble.vue'
+import spinner from './spinner.vue'
 
 export default {
   name: 'tui-scroll',
   components: {
-    Bubble,
-    Loading,
+    bubble,
+    spinner,
   },
   props: {
     data: {
