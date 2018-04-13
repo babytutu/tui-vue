@@ -23,9 +23,6 @@
 </template>
 
 <script type="text/babel">
-import Navbar from './components/navbar.vue'
-import Phone from './components/phone.vue'
-
 export default {
   watch: {
     '$route.path': function () {
@@ -40,11 +37,6 @@ export default {
     return {
       navbarShow: false,
     }
-  },
-
-  components: {
-    Navbar,
-    Phone,
   },
 
   methods: {

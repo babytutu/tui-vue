@@ -5,7 +5,7 @@
         <router-link class="nav-link"
                      active-class="is-active"
                      exact
-                     :to="{ name: 'tui-vue' }">Overview</router-link>
+                     :to="{ path: '/' }">Overview</router-link>
       </li>
       <div v-for="group in navs"
            :key="group.name">
@@ -34,6 +34,7 @@
 import NavsConfig from './../nav.config.json'
 
 export default {
+  name: 'navbar',
   data() {
     return {
       navs: NavsConfig,

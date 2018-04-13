@@ -10,7 +10,7 @@
   "scripts": {
     "start": "npm run dll && npm run build:entry && webpack-dev-server --config webpack/webpack.dev.js",
     "build:doc": "npm run dll && webpack --config webpack/webpack.prod.js",
-    "build:entry": "node bin/build-components.js && node bin/build-router.js && node bin/build-router-demo.js",
+    "build:entry": "node bin/build-components.js",
     "build:pack": "webpack --config webpack/webpack.pack.js && gulp",
     "deploy": "npm run build:doc && gh-pages -d tui-vue -b coding-pages && gh-pages -d tui-vue -o github",
     "lint-fix": "eslint src lib --ext .js,.vue --fix",

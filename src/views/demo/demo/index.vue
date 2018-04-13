@@ -12,7 +12,6 @@
 </template>
 <script type="text/babel">
 import router from './../routes'
-import qrcode from './../../components/qrcode.vue'
 
 export default {
   data() {
@@ -21,9 +20,6 @@ export default {
       qrcodeUrl: window.location.href
     }
   },
-  components: {
-    qrcode
-  }
 }
 </script>
 <style lang="stylus" scoped>
