@@ -1,4 +1,4 @@
-# 图片预览image-preview
+# image-preview
 
 ```html
 <template>
@@ -26,6 +26,6 @@ export default {
 
 ## Props
 
-| 参数          | 说明            | 类型            | 可选值                 | 默认值   |
+| Prop  | Desc       | Type     | Values  | Default  |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
-| url         | 图片地址   | String  | - | - |
+| url         | img url   | String  | - | - |

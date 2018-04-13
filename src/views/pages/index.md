@@ -9,3 +9,7 @@ import Tui from 'tui-vue'
 import 'tui-vue/dist/style.css'
 Vue.use(Tui)
 ```
+## Install JS Components
+```js
+import { $toast, $loading, $popup } from 'tui-vue'
+```

@@ -1,17 +1,19 @@
-# 单行cell
+# cell
 
 ```html
 <template>
   <div>
-    <tui-cell title="左边很多字左边很多字左边很多字左边很多字">
+    <tui-cell title="title">
       <template slot="right">
-        右边
+        right slot
       </template>
     </tui-cell>
-    <tui-cell :noborder="true"
-              title="左边">
+    <tui-cell :noborder="true">
+      <template>
+        default slot
+      </template>
       <template slot="right">
-        右边
+        right slot
       </template>
     </tui-cell>
   </div>
@@ -19,13 +21,13 @@
 ```
 
 ## Props
-| 参数    | 说明      | 类型            | 可选值        | 默认值  |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ----- | ------- | ------------- | ---------- | ---- |
-| title | 标题内容    | String | -          | -    |
-| noborder | 没有底线    | Boolean | -          | false    |
+| title | title    | String | -          | -    |
+| noborder | no border    | Boolean | -          | false    |
 
-## Slot
-| 参数    | 说明     |
+## Slots
+| Name | Desc       |
 | ----- | --------- |
-| -  | 左边内容   |
-| right | 右边内容   |
+| -  | left   |
+| right | right   |

@@ -2,7 +2,7 @@
   <div v-show="isTop"
        @click="backTop">
     <slot>
-      <div class="tui-back-to-top">顶部</div>
+      <div class="tui-back-to-top">TOP</div>
     </slot>
   </div>
 </template>

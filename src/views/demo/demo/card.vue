@@ -1,14 +1,14 @@
 <template>
-  <tui-card title="左边内容">
+  <tui-card title="title">
     <template slot="right">
-      右边内容
+      right slot
     </template>
     <tui-cell :noborder="true"
-              title="左边很多字">
+              title="title">
       <template slot="right">
-        右边很多字
+        right slot
       </template>
     </tui-cell>
-    <p>其他文字内容</p>
+    <p>slot</p>
   </tui-card>
 </template>

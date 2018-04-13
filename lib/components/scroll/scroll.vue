@@ -52,7 +52,7 @@
     </slot>
     <div class="tui-back-to-top"
          @click="scrollTo(0, 0, 700)"
-         v-if="!isTop">顶部
+         v-if="!isTop"><slot name="back">TOP</slot>
     </div>
   </div>
 </template>
@@ -101,7 +101,7 @@ export default {
       default: () => ({
         threshold: 90,
         stop: 40,
-        txt: '刷新完成'
+        txt: 'Refresh completed'
       }),
     },
     pullUpLoad: {
@@ -109,8 +109,8 @@ export default {
       default: () => ({
         threshold: 50,
         txt: {
-          more: '加载更多',
-          noMore: '没有更多了',
+          more: 'Load more',
+          noMore: 'No more',
         },
       }),
     },

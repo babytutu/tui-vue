@@ -1,6 +1,6 @@
 <template>
-  <tui-header title="标题示范">
-    <div slot="left">返回</div>
-    <div slot="right">主页</div>
+  <tui-header title="Header">
+    <div slot="left">left slot</div>
+    <div slot="right">right slot</div>
   </tui-header>
 </template>

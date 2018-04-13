@@ -1,12 +1,12 @@
-# 特殊弹窗Popup
+# Popup
 
-弹窗
+## Use `this.$popup`
 
 ```html
 <template>
   <div class="btn-demo">
-    <tui-button @click="showLoad">这是alert</tui-button>
-    <tui-button @click="showPop">这是confirm</tui-button>
+    <tui-button @click="showLoad">alert</tui-button>
+    <tui-button @click="showPop">confirm</tui-button>
   </div>
 </template>
 <script>
@@ -14,36 +14,80 @@ export default {
   methods: {
     showLoad() {
       this.$popup({
-        message: '这是alert',
+        message: 'alert',
         type: 'alert',
+        prevent: false,
         onConfirm: () => {
-          this.$toast('点击了确定')
-        }
+          this.$toast('ok')
+        },
       })
     },
     showPop() {
       this.$popup({
-        message: '这是confirm',
+        message: 'confirm',
         type: 'confirm',
         onConfirm: () => {
-          this.$toast('点击了确定')
+          this.$toast('ok')
         },
         onCancel: () => {
-          this.$toast('点击了取消')
-        }
+          this.$toast('cancel')
+        },
       })
     },
   },
 }
 </script>
 ```
+
+## Use `$popup`
+
+```html
+<template>
+  <div class="btn-demo">
+    <tui-button @click="showLoad">alert</tui-button>
+    <tui-button @click="showPop">confirm</tui-button>
+  </div>
+</template>
+<script>
+import { $popup } from 'tui-vue'
+
+export default {
+  methods: {
+    showLoad() {
+      $popup({
+        message: 'alert',
+        type: 'alert',
+        prevent: false,
+        onConfirm: () => {
+          this.$toast('ok')
+        },
+      })
+    },
+    showPop() {
+      $popup({
+        message: 'confirm',
+        type: 'confirm',
+        onConfirm: () => {
+          this.$toast('ok')
+        },
+        onCancel: () => {
+          this.$toast('cancel')
+        },
+      })
+    },
+  },
+}
+</script>
+```
+
 ## Props
 
-| 参数          | 说明            | 类型            | 可选值                 | 默认值   |
+| Prop  | Desc       | Type     | Values  | Default  |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
-| message         | 内容(支持html片段)   | String  | - | - |
-| type         | 类型   | String  | alert/confirm  |  alert|
-| onConfirm        | 确定事件   | Function  | - |  -|
-| onCancel         | 取消事件   | Function  | - | - |
-| cancel-text    | 取消按钮文字   | String  | - | 取消 |
-| confirm-text    | 确定按钮文字   | String  | - | 确定 |
+| message         | message(html)   | String  | - | - |
+| type         | type   | String  | alert,confirm  |  alert|
+| prevent      | prevent outside   | Boolean  | true,false | false |
+| onConfirm        | click confirm   | Function  | - |  -|
+| onCancel         | click cancel   | Function  | - | - |
+| cancel-text    | cancel-text   | String  | - | cancel |
+| confirm-text    | confirm-text   | String  | - | ok |

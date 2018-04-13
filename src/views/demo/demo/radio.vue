@@ -18,11 +18,11 @@ export default {
       radio: '',
       radio1: 'a',
       options: [{
-          key: '选项a',
+          key: 'Option-a',
           val: 'a',
         },
         {
-          key: '选项b',
+          key: 'Option-b',
           val: 'b',
         },
       ],

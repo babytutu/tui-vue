@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tui-card title="手机扫码预览">
+    <tui-card title="QRcode">
       <div class="qrcode">
         <qrcode :text="qrcodeUrl"></qrcode>
       </div>

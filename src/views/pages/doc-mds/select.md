@@ -1,15 +1,15 @@
-# 下拉菜单select
+# select
 
-结合tui-cell使用
+tui-cell
 
 ```html
 <template>
   <div>
     <tui-select :alias="['key', 'val']"
-                title="下拉菜单"
+                title="select"
                 :options="options"
                 v-model="select"></tui-select>
-    <tui-cell>已选中{{select}}</tui-cell>
+    <tui-cell>Checked: {{select}}</tui-cell>
   </div>
 </template>
 <script>
@@ -17,11 +17,11 @@ export default {
   data() {
     return {
       options: [{
-          key: '选项1',
+          key: 'Option-a',
           val: 'a'
         },
         {
-          key: '选项2',
+          key: 'Option-b',
           val: 'b'
         }
       ],
@@ -34,10 +34,10 @@ export default {
 
 ## Props
 
-| 参数        | 说明          | 类型     | 可选值       | 默认值  |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ---------- | ------------- | ------- | ----------- | ------ |
-| title      | tui-cell标题 | String | -  | - |
-| v-model    | select选中的值 | String | -  | - |
-| options    | options可选值 | Array | -  | - |
-| alias      | options值的标签别名 | Array | -  | ['label', 'value'] |
-| disabled   | 是否禁用状态 | Boolean | true/false | false
+| title      | title | String | -  | - |
+| v-model    | value | String | -  | - |
+| options    | options | Array | -  | - |
+| alias      | options alias | Array | -  | ['label', 'value'] |
+| disabled   | disabled | Boolean | true,false | false

@@ -3,11 +3,11 @@
     <tui-slip v-for="(i, index) in list"
               :key="`slip-${i}`"
               class="list">
-      <tui-cell :title="`左滑出现删除${i}`">
+      <tui-cell :title="`Slip Left To Delete${i}`">
       </tui-cell>
       <div class="removeBtn"
            slot="right"
-           @click="del(index)">删除</div>
+           @click="del(index)">Delete</div>
     </tui-slip>
   </div>
 </template>
@@ -20,8 +20,8 @@ export default {
   },
   methods: {
     /**
-     * 删除
-     * @param {number} index 索引
+     * Del
+     * @param {number} index index
      */
     del(index) {
       this.list.splice(index, 1)

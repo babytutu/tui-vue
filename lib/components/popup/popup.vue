@@ -2,6 +2,7 @@
   <transition name="fade">
     <div v-if="visible"
          class="tui-mask-bg"
+         @click="doClickMask"
          @touchmove="(e) => e.preventDefault()">
       <div class="tui-popup-warp tui-border">
         <div class="tui-popup-content tui-border"
@@ -41,11 +42,11 @@ export default {
     },
     confirmText: {
       type: String,
-      default: '确定',
+      default: 'ok',
     },
     cancelText: {
       type: String,
-      default: '取消',
+      default: 'cancel',
     },
   },
   data() {
@@ -79,6 +80,15 @@ export default {
     doConfirm() {
       this.removeDom(this.onConfirm)
     },
+    /**
+     * 遮罩层click事件
+     */
+    doClickMask() {
+      if (!this.prevent) this.removeDom(this.onCancel)
+    },
   },
 }
 </script>
+<style lang="stylus" scoped>
+@import './../../assets/style/components/popup.styl'
+</style>

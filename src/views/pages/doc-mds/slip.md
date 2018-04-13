@@ -1,6 +1,4 @@
-# 滑动slip
-
-左滑出现右侧操作内容，如常见的删除
+# slip
 
 ```html
 <template>
@@ -8,11 +6,11 @@
     <tui-slip v-for="(i, index) in list"
               :key="`slip-${i}`"
               class="list">
-      <tui-cell :title="`左滑出现删除${i}`">
+      <tui-cell :title="`Slip Left To Delete${i}`">
       </tui-cell>
       <div class="removeBtn"
            slot="right"
-           @click="del(index)">删除</div>
+           @click="del(index)">Delete</div>
     </tui-slip>
   </div>
 </template>
@@ -25,8 +23,8 @@ export default {
   },
   methods: {
     /**
-     * 删除
-     * @param {number} index 索引
+     * Del
+     * @param {number} index index
      */
     del(index) {
       this.list.splice(index, 1)
@@ -44,9 +42,9 @@ export default {
 </style>
 ```
 
-## Slot
+## Slots
 
-| name  | 描述 |
+| Name  | Desc |
 | ----- | --- |
-| -     | 默认 |
-| right | 右侧 |
+| -     | content |
+| right | right |

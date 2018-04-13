@@ -1,4 +1,4 @@
-# 返回顶部back-to-top
+# back-to-top
 
 ```html
 <template>
@@ -23,12 +23,12 @@ export default {
 
 ## Props
 
-| 参数名  | 说明       | 类型     | 可选值  | 默认值  |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ---- | -------- | ------ | ---- | ---- |
-| el   | 外部dom的id | string | —    | —    |
+| el   | dom id | string | —    | —    |
 
-## Slot
+## Slots
 
-| 参数 | 说明       |
+| Name | Desc       |
 | --- | ---------- |
-| -   | 返回顶部的dom结构 |
+| -   | dom |

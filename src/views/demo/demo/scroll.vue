@@ -27,33 +27,33 @@ export default {
   },
   methods: {
     /**
-     * 上滑加载更多
+     * PullingUp
      */
     onPullingUp() {
-      // 模拟更新数据
+      // mock data
       setTimeout(() => {
         if (this.itemIndex < 10) {
           for (let i = -10; i < 0; i++) {
             this.items.push(++this.itemIndex)
           }
         } else {
-          // 如果没有新数据
+          // no data
           this.$refs.scroll.forceUpdate()
         }
       }, 1000)
     },
     /**
-     * 下拉刷新
+     * PullingDown
      */
     onPullingDown() {
-      // 模拟更新数据
+      // mock data
       setTimeout(() => {
         if (this.itemIndex < 20) {
           for (let i = -10; i < 0; i++) {
             this.items.push(++this.itemIndex)
           }
         } else {
-          // 如果没有新数据
+          // no data
           this.$refs.scroll.forceUpdate()
         }
       }, 1000)

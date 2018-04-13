@@ -1,5 +1,6 @@
-# 单选radio
-结合tui-cell
+# radio
+
+tui-cell
 
 ```html
 <template>
@@ -22,11 +23,11 @@ export default {
       radio: '',
       radio1: 'a',
       options: [{
-          key: '选项a',
+          key: 'Option-a',
           val: 'a',
         },
         {
-          key: '选项b',
+          key: 'Option-b',
           val: 'b',
         },
       ],
@@ -39,8 +40,8 @@ export default {
 
 ## Props
 
-| 参数        | 说明          | 类型     | 可选值       | 默认值  |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ---------- | ------------- | ------- | ----------- | ------ |
-| v-model    | radio选中的值 | String | -  | - |
-| options    | radio可选值 | Array | -  | - |
-| alias      | radio值的标签别名 | Array | -  | ['label', 'value'] |
+| v-model    | value | String | -  | - |
+| options    | options | Array | -  | - |
+| alias      | options alias | Array | -  | ['label', 'value'] |

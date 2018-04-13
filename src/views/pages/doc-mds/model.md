@@ -1,17 +1,15 @@
-# 弹窗Model
-
-基础弹层
+# Model
 
 
 ```html
 <template>
   <div class="btn-demo">
     <tui-button class="dd-btn tui-border"
-                @click="show=true">打开弹窗</tui-button>
+                @click="show=true">Open Model</tui-button>
     <tui-model v-model="show"
                :onClose="doClose">
       <tui-button class="dd-btn tui-border"
-                  @click="show=false">关闭弹窗</tui-button>
+                  @click="show=false">Close Model</tui-button>
     </tui-model>
   </div>
 </template>
@@ -24,7 +22,7 @@ export default {
   },
   methods: {
     doClose() {
-      this.$toast('关闭了')
+      this.$toast('Closed')
     },
   },
 }
@@ -32,9 +30,9 @@ export default {
 ```
 ## Props
 
-| 参数          | 说明            | 类型            | 可选值                 | 默认值   |
+| Prop  | Desc       | Type     | Values  | Default  |
 |------------- |---------------- |---------------- |---------------------- |-------- |
-| v-model       | 绑定值   | Boolean  | true、false | - |
-| mask    | 是否需要遮罩层   | Boolean  | true、false | true |
-| prevent    | 点击外层是否关闭   | Boolean  | true、false | false |
-| onClose    | 关闭执行事件   | Function  | - | - |
+| v-model       | value   | Boolean  | true,false | - |
+| mask    | need mask   | Boolean  | true,false | true |
+| prevent    | prevent outside   | Boolean  | true,false | false |
+| onClose    | click close   | Function  | - | - |

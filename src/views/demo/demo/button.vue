@@ -1,30 +1,16 @@
 <template>
   <div class="btn-demo">
-    <tui-button type="diy">自定义样式的按钮</tui-button>
-    <tui-button @click="changeBtn">普通按钮</tui-button>
-    <tui-button type="primary">蓝色的按钮</tui-button>
-    <tui-button type="danger">红色的按钮</tui-button>
-    <tui-button type="success">绿色的按钮</tui-button>
-    <tui-button type="warning">黄色的按钮</tui-button>
-    <tui-button type="link">假装是链接的按钮</tui-button>
-    <tui-button type="small">小号的按钮</tui-button>
-    <tui-button :disabled="disabled">禁用的按钮</tui-button>
+    <tui-button type="diy">diy</tui-button>
+    <tui-button>common</tui-button>
+    <tui-button type="primary">primary</tui-button>
+    <tui-button type="danger">danger</tui-button>
+    <tui-button type="success">success</tui-button>
+    <tui-button type="warning">warning</tui-button>
+    <tui-button type="link">link</tui-button>
+    <tui-button type="small">small</tui-button>
+    <tui-button :disabled="true">disabled</tui-button>
   </div>
 </template>
-<script>
-  export default {
-    data() {
-      return {
-        disabled: false,
-      }
-    },
-    methods: {
-      changeBtn() {
-        this.disabled = !this.disabled
-      },
-    },
-  }
-</script>
 <style lang="stylus" scoped>
 .diy
   background #000

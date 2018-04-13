@@ -1,7 +1,7 @@
 <template>
   <div class="btn-demo">
-    <tui-button @click="showLoad">这是alert</tui-button>
-    <tui-button @click="showPop">这是confirm</tui-button>
+    <tui-button @click="showLoad">alert</tui-button>
+    <tui-button @click="showPop">confirm</tui-button>
   </div>
 </template>
 <script>
@@ -9,22 +9,23 @@ export default {
   methods: {
     showLoad() {
       this.$popup({
-        message: '这是alert',
+        message: 'alert',
         type: 'alert',
+        prevent: false,
         onConfirm: () => {
-          this.$toast('点击了确定')
+          this.$toast('ok')
         },
       })
     },
     showPop() {
       this.$popup({
-        message: '这是confirm',
+        message: 'confirm',
         type: 'confirm',
         onConfirm: () => {
-          this.$toast('点击了确定')
+          this.$toast('ok')
         },
         onCancel: () => {
-          this.$toast('点击了取消')
+          this.$toast('cancel')
         },
       })
     },

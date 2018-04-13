@@ -1,23 +1,23 @@
-# 头部导航header
+# header
 
 ```html
 <template>
-  <tui-header title="标题示范">
-    <div slot="left">返回</div>
-    <div slot="right">主页</div>
+  <tui-header title="Header">
+    <div slot="left">left slot</div>
+    <div slot="right">right slot</div>
   </tui-header>
 </template>
 ```
 
 
 ## Props
-| 参数    | 说明      | 类型            | 可选值        | 默认值  |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ----- | ------- | ------------- | ---------- | ---- |
-| title | 标题内容    | String,Number | -          | -    |
-| fixed | 是否固定在顶部 | Boolean | true/false | true |
+| title | title    | String,Number | -          | -    |
+| fixed | fix top | Boolean | true,false | true |
 
-## Slot
-| 参数    | 说明           |
+## Slots
+| Name | Desc       |
 | ----- | --------------- |
-| left  | 左边内容 |
-| right | 右边内容 |
+| left  | left |
+| right | right |

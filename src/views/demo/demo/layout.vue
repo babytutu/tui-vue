@@ -1,10 +1,10 @@
 <template>
   <tui-layout :is-scroll="true">
     <template>
-      自定义头部
+      default slot
     </template>
     <template slot="content">
-      呵呵呵
+      content slot
     </template>
   </tui-layout>
 </template>

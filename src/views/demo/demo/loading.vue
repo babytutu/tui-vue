@@ -1,13 +1,13 @@
 <template>
   <div class="btn-demo">
-    <tui-button @click="showLoad">点击加载</tui-button>
+    <tui-button @click="showLoad">Show Loading</tui-button>
   </div>
 </template>
 <script>
 export default {
   methods: {
     showLoad() {
-      this.$loading('加载中')
+      this.$loading('Loading')
       setTimeout(() => {
         this.$loading.hide()
       }, 2000)

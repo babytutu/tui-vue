@@ -1,7 +1,7 @@
-# 简单轮播Slide
+# Slide
 
-使用[better-scroll](https://github.com/ustbhuangyi/better-scroll)做了简单封装
-外部容器必须定宽定高
+Use [better-scroll](https://github.com/ustbhuangyi/better-scroll)
+Outside container must be set width & height
 
 ```html
 <template>
@@ -20,11 +20,11 @@ export default {
   data() {
     return {
       imgs: [{
-          picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000001YCZlY3aBifi.jpg',
+          picUrl: 'http://cms-bucket.nosdn.127.net/4fa465dc5b144e1f8e962cac0059608620170921111259.png',
           id: 11351,
         },
         {
-          picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000004ckGfg3zaho0.jpg',
+          picUrl: 'http://cms-bucket.nosdn.127.net/f994f0be879d49ecb6cd5df00969b81020170921161034.png',
           id: 11372,
         },
       ],
@@ -48,12 +48,12 @@ export default {
 
 ## Props
 
-| 参数        | 说明          | 类型     | 可选值       | 默认值  |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ---------- | ------------- | ------- | ----------- | ------ |
-| showDot    | 是否需要分页符号 | boolean | true/false  | true  |
-| autoPlay   | 是否自动播放     | boolean | true/false  | false |
-| loop       | 是否循环        | boolean | true/false  | true  |
+| showDot    | need dot | boolean | true,false  | true  |
+| autoPlay   | autoPlay     | boolean | true,false  | false |
+| loop       | loop        | boolean | true,false  | true  |
 
 
-## 更多参数
+## More
 [better-scroll](https://github.com/ustbhuangyi/better-scroll)

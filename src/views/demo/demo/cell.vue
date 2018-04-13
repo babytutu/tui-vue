@@ -1,14 +1,16 @@
 <template>
   <div>
-    <tui-cell title="左边很多字左边很多字左边很多字左边很多字">
+    <tui-cell title="title">
       <template slot="right">
-        右边
+        right slot
       </template>
     </tui-cell>
-    <tui-cell :noborder="true"
-              title="左边">
+    <tui-cell :noborder="true">
+      <template>
+        default slot
+      </template>
       <template slot="right">
-        右边
+        right slot
       </template>
     </tui-cell>
   </div>

@@ -14,11 +14,11 @@ export default {
   data() {
     return {
       imgs: [{
-          picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000001YCZlY3aBifi.jpg',
+          picUrl: 'http://cms-bucket.nosdn.127.net/4fa465dc5b144e1f8e962cac0059608620170921111259.png',
           id: 11351,
         },
         {
-          picUrl: 'http://y.gtimg.cn/music/photo_new/T003R720x288M000004ckGfg3zaho0.jpg',
+          picUrl: 'http://cms-bucket.nosdn.127.net/f994f0be879d49ecb6cd5df00969b81020170921161034.png',
           id: 11372,
         },
       ],

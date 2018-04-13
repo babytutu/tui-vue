@@ -1,21 +1,21 @@
-# 开关switch
+# switch
 
 ```html
 <template>
   <div>
-    <tui-cell title="可修改的开关">
+    <tui-cell title="Switch">
       <tui-switch slot="right"
                   v-model="val1"></tui-switch>
     </tui-cell>
-    <tui-cell title="开关状态">
+    <tui-cell title="Status">
       <template slot="right">{{val1}}</template>
     </tui-cell>
-    <tui-cell title="启用状态下禁用的开关">
+    <tui-cell title="Open & Disabled">
       <tui-switch slot="right"
                   v-model="val2"
                   :disabled="isDisabled"></tui-switch>
     </tui-cell>
-    <tui-cell title="关闭状态下禁用的开关">
+    <tui-cell title="Close & Disabled">
       <tui-switch slot="right"
                   v-model="val3"
                   :disabled="isDisabled"></tui-switch>
@@ -38,7 +38,7 @@ export default {
 
 ## Props
 
-| 参数        | 说明          | 类型     | 可选值       | 默认值  |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ---------- | ------------- | ------- | ----------- | ------ |
-| v-model    | 开关状态 | Boolean | true/false  |- |
-| disabled   | 是否禁用 | Boolean | true/false  |false |
+| v-model    | value | Boolean | true,false  |- |
+| disabled   | disabled | Boolean | true,false  |false |

@@ -38,3 +38,6 @@ export default {
   },
 }
 </script>
+<style lang="stylus" scoped>
+@import './../../assets/style/components/loading.styl'
+</style>

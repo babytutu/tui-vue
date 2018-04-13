@@ -1,31 +1,31 @@
-# 区块card
+# card
 
 ```html
 <template>
-  <tui-card title="左边内容">
+  <tui-card title="title">
     <template slot="right">
-      右边内容
+      right slot
     </template>
     <tui-cell :noborder="true"
-              title="左边很多字">
+              title="title">
       <template slot="right">
-        右边很多字
+        right slot
       </template>
     </tui-cell>
-    <p>其他文字内容</p>
+    <p>slot</p>
   </tui-card>
 </template>
 ```
 
 ## Props
-| 参数        | 说明    | 类型     | 可选值   | 默认值 |
+| Prop  | Desc       | Type     | Values  | Default  |
 | ---------- | ------- | ------- | ------- | ---- |
-| title      | 标题左侧 | String  | -       | -    |
-| showHeader | 显示标题 | Boolean | true/false       | true |
+| title      | left | String  | -       | -    |
+| showHeader | show header | Boolean | true,false       | true |
 
 ## Slot
-| 参数    | 说明     |
-| ----- | --------- |
-| left  | 左边内容   |
-| right | 右边内容   |
-| -     | 下面内容   |
+| Name  | Desc     |
+| ----- | -------- |
+| left  | left     |
+| right | right    |
+| -     | content  |

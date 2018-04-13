@@ -1,5 +1,5 @@
-# 滚动Scroll
-下拉刷新，上拉加载更多
+# Scroll
+
 [better-scroll](https://github.com/ustbhuangyi/better-scroll)
 
 ```html
@@ -32,33 +32,33 @@ export default {
   },
   methods: {
     /**
-     * 上滑加载更多
+     * PullingUp
      */
     onPullingUp() {
-      // 模拟更新数据
+      // mock data
       setTimeout(() => {
         if (this.itemIndex < 10) {
           for (let i = -10; i < 0; i++) {
             this.items.push(++this.itemIndex)
           }
         } else {
-          // 如果没有新数据
+          // no data
           this.$refs.scroll.forceUpdate()
         }
       }, 1000)
     },
     /**
-     * 下拉刷新
+     * PullingDown
      */
     onPullingDown() {
-      // 模拟更新数据
+      // mock data
       setTimeout(() => {
         if (this.itemIndex < 20) {
           for (let i = -10; i < 0; i++) {
             this.items.push(++this.itemIndex)
           }
         } else {
-          // 如果没有新数据
+          // no data
           this.$refs.scroll.forceUpdate()
         }
       }, 1000)
@@ -84,16 +84,20 @@ export default {
 
 ## Props
 
-| 参数                | 说明          | 类型      | 可选值        | 默认值                  |
-| ----------------- | ----------- | ------- | ---------- | -------------------- |
-| data           | 数据        | array   | —          | []                   |
+| Prop  | Desc        | Type    | Values     | Default  |
+| ----- | ----------- | ------- | ---------- | -------------------- |
+| data  | data        | array   | —          | []                   |
+
+## Slots
+| Name | Desc        |
+| ---- | ----------- |
+| back | back to top |
 
 ## Methods
-
-| 名称         | 说明 |
+| Name | Desc       |
 | ----------- | ----- |
-| pullingDown | 下拉刷新方法，加载完成后，通过forceUpdate()方法告知组件 |
-| onPullingUp | 上拉加载更多，加载完成后，通过forceUpdate()方法告知组件 |
+| pullingDown | pullingDown，forceUpdate() end |
+| onPullingUp | onPullingUp，forceUpdate() end |
 
-## 更多参数
+## More
 [better-scroll](https://github.com/ustbhuangyi/better-scroll)

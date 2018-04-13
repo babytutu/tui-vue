@@ -1,9 +1,9 @@
 <template>
   <div class="tui-tab tui-border">
     <div v-for="i in list"
-         :key="i[label[0]]"
-         :class="['tui-tab-cell tui-border', { 'tui-tab-cell_active': i[label[0]] === value}]"
-         @click="changeTab(i[label[0]])">{{i[label[1]]}}</div>
+         :key="i[alias[0]]"
+         :class="['tui-tab-cell tui-border', { 'tui-tab-cell_active': i[alias[0]] === value}]"
+         @click="changeTab(i[alias[0]])">{{i[alias[1]]}}</div>
   </div>
 </template>
 <script>
@@ -13,10 +13,10 @@ export default {
     value: {
       type: [String, Number]
     },
-    label: {
+    alias: {
       type: Array,
       default: () => [
-        'key',
+        'label',
         'value'
       ]
     },

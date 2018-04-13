@@ -10,25 +10,25 @@
 export default {
   data() {
     return {
-      checkbox: ['禁用111'],
+      checkbox: ['disabled1'],
       options: [{
-          key: '禁用选中',
-          val: '禁用111',
+          key: 'checked & disabled',
+          val: 'disabled1',
           disabled: true
         },
         {
-          key: '禁用不可选',
-          val: '禁用222',
+          key: 'disabled',
+          val: 'disabled2',
           disabled: true
         },
         {
-          key: '可选2',
-          val: '可选222',
+          key: 'option2',
+          val: 'option2',
           disabled: false
         },
         {
-          key: '可选3',
-          val: '可选333',
+          key: 'option3',
+          val: 'option3',
           disabled: false
         },
       ]

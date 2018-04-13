@@ -32,3 +32,6 @@ export default {
   },
 }
 </script>
+<style lang="stylus" scoped>
+@import './../../assets/style/components/toast.styl'
+</style>

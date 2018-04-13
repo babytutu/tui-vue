@@ -1,20 +1,45 @@
-# 加载loading
+# loading
 
+## Use `this.$loading`
 ```html
 <template>
   <div class="btn-demo">
-    <tui-button @click="showLoad">点击加载</tui-button>
+    <tui-button @click="showLoad">Show Loading</tui-button>
   </div>
 </template>
 <script>
 export default {
   methods: {
     showLoad() {
-      this.$loading('加载中')
+      this.$loading('Loading')
       setTimeout(() => {
         this.$loading.hide()
       }, 2000)
-    }
+    },
+  },
+}
+</script>
+```
+
+## Use `$loading`
+
+```html
+<template>
+  <div class="btn-demo">
+    <tui-button @click="showLoad">Show Loading</tui-button>
+  </div>
+</template>
+<script>
+import { $loading } from 'tui-vue'
+
+export default {
+  methods: {
+    showLoad() {
+      $loading('Loading')
+      setTimeout(() => {
+        $loading.hide()
+      }, 2000)
+    },
   },
 }
 </script>

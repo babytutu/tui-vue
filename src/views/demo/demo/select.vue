@@ -1,10 +1,10 @@
 <template>
   <div>
     <tui-select :alias="['key', 'val']"
-                title="下拉菜单"
+                title="select"
                 :options="options"
                 v-model="select"></tui-select>
-    <tui-cell>已选中{{select}}</tui-cell>
+    <tui-cell>Checked: {{select}}</tui-cell>
   </div>
 </template>
 <script>
@@ -12,11 +12,11 @@ export default {
   data() {
     return {
       options: [{
-          key: '选项1',
+          key: 'Option-a',
           val: 'a'
         },
         {
-          key: '选项2',
+          key: 'Option-b',
           val: 'b'
         }
       ],
