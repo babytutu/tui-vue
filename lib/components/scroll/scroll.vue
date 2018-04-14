@@ -17,9 +17,7 @@
           </div>
           <div class="after-trigger"
                v-else>
-            <div class="loading-container">
-              <spinner></spinner>
-            </div>
+            <spinner></spinner>
           </div>
         </div>
       </slot>
@@ -40,11 +38,8 @@
         </div>
         <div class="after-trigger"
              v-else>
-          <div v-if="isPullingDown"
-               class="loading">
-            <div class="loading-container">
-              <spinner></spinner>
-            </div>
+          <div v-if="isPullingDown">
+            <spinner></spinner>
           </div>
           <div v-else><span>{{refreshTxt}}</span></div>
         </div>

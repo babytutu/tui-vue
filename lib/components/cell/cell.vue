@@ -15,7 +15,6 @@ export default {
     title: {
       type: [String, Number],
     },
-    // 不需要底部边框
     noborder: {
       type: Boolean,
       default: false,

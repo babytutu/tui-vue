@@ -21,7 +21,6 @@ export default {
     title: {
       type: [String, Number],
     },
-    // 是否需要标题
     showHeader: {
       type: Boolean,
       default: true,
