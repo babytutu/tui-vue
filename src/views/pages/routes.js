@@ -8,7 +8,7 @@ export default {
   children: [
     {
       path: '',
-      name: '',
+      name: 'index',
       component: () => import('./index.md'),
     },
     {

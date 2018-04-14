@@ -3,7 +3,7 @@
     <slot name="header">
       <tui-header :title="route.name.replace('demo-', '')">
         <div slot="left"
-             @click="goBack">Back</div>
+             @click="goDocs">Docs</div>
         <div slot="right">
           <router-link to="/demo/index">Home</router-link>
         </div>
@@ -29,9 +29,10 @@ export default {
     /**
      * 返回
      */
-    goBack() {
+    goDocs() {
+      const name = this.route.name.replace('demo-', '')
       this.$router.push({
-        name: 'demo-index',
+        name
       })
     },
   },

@@ -13,6 +13,7 @@
           <span></span>
           <span></span>
         </button>
+        <a class="mob-demo" @click="goDemo">DEMO</a>
       </div>
       <router-view></router-view>
     </section>
@@ -23,6 +24,8 @@
 </template>
 
 <script type="text/babel">
+const location = window.location
+
 export default {
   watch: {
     '$route.path': function () {
@@ -30,6 +33,16 @@ export default {
       setTimeout(() => {
         this.navbarShow = false
       }, 200)
+    },
+  },
+
+  computed: {
+    /**
+     * 页面信息，route参数
+     * @returns {object} 页面相关设置
+     */
+    route() {
+      return this.$route
     },
   },
 
@@ -44,11 +57,21 @@ export default {
       event.stopPropagation()
       this.navbarShow = !this.navbarShow
     },
+    goDemo() {
+      const name = `demo-${this.route.name}`
+      this.$router.push({
+        name
+      })
+    }
   },
 }
 </script>
 
 <style lang="stylus" scoped>
+  .mob-demo{
+    line-height 55px
+    color #fff
+  }
   .main {
     display flex
     height: 100%;
@@ -76,7 +99,9 @@ export default {
       }
 
       &.demo {
+        padding-left 10px
         padding-right 10px
+        min-width: 440px
       }
     }
   }
@@ -143,9 +168,11 @@ export default {
 
     .navbar-toggle-container {
       box-sizing: border-box;
-      display: block;
+      display: flex;
+      justify-content: space-between;
       position: fixed;
       padding-left: 20px;
+      padding-right 20px
       top: 0;
       left: 0;
       width: 100%;
