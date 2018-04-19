@@ -12,6 +12,7 @@
     "doc": "node bin doc",
     "pack": "node bin pack",
     "deploy": "node bin deploy",
+    "eslint": "node bin eslint",
     "fix": "node bin fix",
     "dll": "node bin dll",
     "pub": "node bin pub",

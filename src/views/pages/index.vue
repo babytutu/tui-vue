@@ -24,8 +24,6 @@
 </template>
 
 <script type="text/babel">
-const location = window.location
-
 export default {
   watch: {
     '$route.path': function () {
