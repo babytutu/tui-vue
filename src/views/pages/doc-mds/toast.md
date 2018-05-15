@@ -14,7 +14,9 @@
 export default {
   methods: {
     showLoad(place) {
-      this.$toast({ message: `Msg ${place}`, place })
+      this.$toast({ message: `Msg ${place}`, place }, () => {
+        this.log(place)
+      })
     },
   },
 }
@@ -37,7 +39,9 @@ import { $toast } from 'tui-vue'
 export default {
   methods: {
     showLoad(place) {
-      $toast({ message: `Msg ${place}`, place })
+      $toast({ message: `Msg ${place}`, place }, () => {
+        this.log(place)
+      })
     },
   },
 }
@@ -53,3 +57,4 @@ export default {
 | className    | class name   | String  | - | - |
 | place        | position   | String  | top,middle,bottom  | middle |
 | duration     | duration(ms)   | Number  | - | 3000 |
+| cb           | after toast | function | () => {} |

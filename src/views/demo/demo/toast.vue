@@ -9,7 +9,9 @@
 export default {
   methods: {
     showLoad(place) {
-      this.$toast({ message: `Msg ${place}`, place })
+      this.$toast({ message: `Msg ${place}`, place }, () => {
+        this.log(place)
+      })
     },
   },
 }
