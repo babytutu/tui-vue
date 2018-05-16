@@ -16,7 +16,8 @@
     "fix": "node bin fix",
     "dll": "node bin dll",
     "pub": "node bin pub",
-    "entry": "node bin entry"
+    "entry": "node bin entry",
+    "postinstall": "cp hooks/* .git/hooks/"
   },
   "main": "dist/index.js",
   "style": "dist/style.css",
