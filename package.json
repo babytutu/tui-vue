@@ -16,7 +16,8 @@
     "fix": "node bin fix",
     "dll": "node bin dll",
     "pub": "node bin pub",
-    "entry": "node bin entry"
+    "entry": "node bin entry",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "main": "dist/index.js",
   "style": "dist/style.css",
@@ -41,6 +42,7 @@
     "babel-eslint": "^8.2.2",
     "babel-loader": "^8.0.0-beta.2",
     "clean-webpack-plugin": "^0.1.19",
+    "conventional-changelog-cli": "^1.3.22",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.10",
     "eslint": "^4.18.2",
