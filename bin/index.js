@@ -10,7 +10,7 @@ const commands = {
   doc: 'npm run dll && webpack --config webpack/webpack.prod.js',
   deploy: 'npm run doc && gh-pages -d tui-vue -b coding-pages && gh-pages -d tui-vue -o github',
   pack: 'webpack --config webpack/webpack.pack.js && gulp',
-  pub: 'npm run pack && npm publish',
+  pub: 'npm run pack && npm publish && npm run deploy',
   help: 'help',
   entry: 'node bin/build-router.js && node bin/build-router-demo.js'
 }
