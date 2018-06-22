@@ -1,6 +1,6 @@
 <template>
   <tui-cell :title="title">
-    <select v-model="key"
+    <select :value="value"
             :disabled="disabled"
             slot="right"
             @change="change">
@@ -15,11 +15,6 @@
 <script>
 export default {
   name: 'tui-select',
-  data() {
-    return {
-      key: this.value
-    }
-  },
   props: {
     title: {
       type: String,
@@ -40,8 +35,8 @@ export default {
     }
   },
   methods: {
-    change() {
-      this.$emit('input', this.key)
+    change(e) {
+      this.$emit('input', e.target.value)
     }
   },
 }

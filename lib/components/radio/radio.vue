@@ -38,9 +38,9 @@ export default {
     }
   },
   methods: {
-    change() {
+    change(e) {
       if (!this.disabled) {
-        this.$emit('input', this.key)
+        this.$emit('input', e.target.value)
       }
     }
   },
