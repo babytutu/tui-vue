@@ -56,7 +56,7 @@ export default {
       this.navbarShow = !this.navbarShow
     },
     goDemo() {
-      const name = `demo-${this.route.name}`
+      const name = this.route.name !== 'index' ? `demo-${this.route.name}` : 'demo'
       this.$router.push({
         name
       })

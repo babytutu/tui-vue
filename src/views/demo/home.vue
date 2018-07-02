@@ -11,7 +11,7 @@
   </div>
 </template>
 <script type="text/babel">
-import router from './../routes'
+import router from './routes'
 
 export default {
   data() {
