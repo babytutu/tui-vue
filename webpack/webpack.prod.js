@@ -1,6 +1,6 @@
 const merge = require('webpack-merge')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const ExtractCssChunks = require("extract-css-chunks-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const common = require('./webpack.common.js')
@@ -12,7 +12,7 @@ module.exports = merge(common, {
     new CleanWebpackPlugin([outputDir], {
       root: process.cwd()
     }),
-    new ExtractCssChunks({
+    new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: '[name]-[hash:8].css',
@@ -29,7 +29,7 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         use: [
-          ExtractCssChunks.loader,
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader'
         ],
@@ -37,7 +37,7 @@ module.exports = merge(common, {
       {
         test: /\.styl$/,
         use: [
-          ExtractCssChunks.loader,
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'stylus-loader'
@@ -54,13 +54,13 @@ module.exports = merge(common, {
             ],
             css: [
               'vue-style-loader',
-              ExtractCssChunks.loader,
+              MiniCssExtractPlugin.loader,
               'css-loader',
               'postcss-loader'
             ],
             stylus: [
               'vue-style-loader',
-              ExtractCssChunks.loader,
+              MiniCssExtractPlugin.loader,
               'css-loader',
               'postcss-loader',
               'stylus-loader'

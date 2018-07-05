@@ -92,11 +92,6 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    alias: {
-      'src': path.join(process.cwd(), 'src')
-    }
-  },
   stats: {
     // Add built modules information
     modules: false,
